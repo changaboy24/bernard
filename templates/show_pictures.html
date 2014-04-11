@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_picture') }}" method=post class=add-picture>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>
+        <dt>Url:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=pictures>
+  {% for picture in pictures %}
+    <li><h2>{{ picture.title }}</h2>{{ picture.text|safe }}
+  {% else %}
+    <li><em>Unbelievable.  No pictures here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
