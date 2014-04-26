@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>All Items</h2>
+    <table class=todos>
+      {%- for category in photo_dict.keys() %}
+        {%- for photo in photo_dict[category] %}
+        <tr class=title>
+          <td>{{ photo.id }}</td>
+          <td>{{ photo.caption }} </td>
+          <td><img src={{ photo.url }} </td>
+          <td>{{ photo.category }} </td>
+          <td>{{ photo.homepage }} </td>
+          <td>{{ photo.date.strftime('%Y-%m-%d %H:%M') }}
+        {%- endfor %}
+      {%- endfor %}
+    </table>
+{% endblock %}

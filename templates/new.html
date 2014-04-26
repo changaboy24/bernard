@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>New Todo Item</h2>
+  <form action="" method=post>
+    <p>caption:
+      <input type=text name=caption value="{{ request.form.caption }}">
+    <p>url:
+      <input type=text name=url value="{{ request.form.url }}">
+    <p>category:
+      <input type=text name=category value="{{ request.form.category }}">
+    <p>homepage:
+      <input type=checkbox name=homepage value="{{ request.form.homepage }}">
+    <p>
+      <input type=submit value="Create entry">
+      <a href="{{ url_for('show_all') }}">Back to list</a>
+  </form>
+{% endblock %}
