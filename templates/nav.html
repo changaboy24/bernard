@@ -1,15 +1,27 @@
 <!doctype html>
-<div class = "nav">
-	<title>Bernard Wen</title>
-	<h1>Bernard Wen</h1>
+<html>
+	<head>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+		<title> Bernard Wen </title>
+	</head>
 
-	{% block body %}
-	{% endblock %}
-	<ul>
-	{%- for category in categories %}
-		<li><a href="#">{{category}}</a></li>
-	{%- endfor %}
-	</ul>
-	<hr>
-	<address>Made by Rich Chang</address>
-</div>
+	<ul id="nav_bar">
+		<div id="logo">
+			<h1> bernard wen </h1>
+		</div>
+		<li>Home</li>
+		<li>About me</li>
+		<li>Portfolio</li>
+			<ul id="categories">
+			{%- for category in categories %}
+				<li><a href="#">{{category}}</a></li>
+			{%- endfor %}
+			</ul>
+		<li>
+		<li>Connect</li>
+
+	</div>
+	<div id="content">
+		{% block body %}{% endblock %}
+	</div>
+</html>
