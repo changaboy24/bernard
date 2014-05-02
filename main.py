@@ -35,7 +35,7 @@ def show_all():
         photo_dict[category] = photos
 
     print photo_dict
-    return render_template('show_all.html',photo_dict = photo_dict)
+    return render_template('show_all.html',photo_dict = photo_dict, categories = get_categories())
 
 @app.route('/new', methods=['GET', 'POST'])
 def new():
@@ -75,6 +75,14 @@ def get_categories():
             categories.append(photo.category)
     return categories
 
+def get_photos(category):
+    photos = Photo.query.filter_by(category = category)
+    return photos
+
+def get_homepage_photos():
+    photos = Photo.query.filter_by(homepage = True)
+    return photos
+    
 if __name__ == '__main__':
     db.create_all()
     app.run()

@@ -1,0 +1,18 @@
+<!doctype html>
+<div class = "nav">
+	<title>Bernard Wen</title>
+	<h1>Bernard Wen</h1>
+	{%- for category, message in get_flashed_messages(with_categories=true) %}
+	  <p class="flask {{ category }}-flash">{{
+	    "Error: " if category == 'error' }}{{ message }}</p>
+	{%- endfor %}
+	{% block body %}
+	{% endblock %}
+	<ul>
+	{%- for category in categories %}
+		<li><a href="#">{{category}}</a></li>
+	{%- endfor %}
+	</ul>
+	<hr>
+	<address>Made by Rich Chang</address>
+</div>
