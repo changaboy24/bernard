@@ -3,4 +3,41 @@
 	float: left; 
 	height: 100%;
 	position: fixed;
+	color: #fff;
+	background: #EDEDF3;
+	width: 220px;
+	color:black;
+	opacity: 0.7;
 }
+
+#content {
+	width: 9000px;
+}
+#logo {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-style: italic;
+	font-weight:100;
+	font-size: 27px;
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 25%
+
+}
+#navbar {
+	list-style-type: none;
+}
+#navbar li {
+	border-bottom: 1px solid #cccccc;
+	width: 79%;
+	margin:0 0 15px 0; 
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+	display:inline;
+	margin-left: 10px;
+}
+body {
+	background: black;
+}
+

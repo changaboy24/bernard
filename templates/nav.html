@@ -2,26 +2,34 @@
 <html>
 	<head>
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-		<title> Bernard Wen </title>
+		<title> Bernard Wen Photography </title>
 	</head>
-
-	<ul id="nav_bar">
-		<div id="logo">
-			<h1> bernard wen </h1>
-		</div>
-		<li>Home</li>
-		<li>About me</li>
-		<li>Portfolio</li>
-			<ul id="categories">
-			{%- for category in categories %}
-				<li><a href="#">{{category}}</a></li>
-			{%- endfor %}
-			</ul>
-		<li>
-		<li>Connect</li>
-
+	<div id="navigation">
+		<ul id="navbar">
+			<div id="logo">
+				<p> bernard wen </p>
+			</div>
+			<li>Home</li>
+			<li>About me</li>
+			<li>Portfolio</li>
+				<ul id="categories">
+				{%- for category in categories %}
+					<li><a href="#">{{category}}</a></li>
+				{%- endfor %}
+				</ul>
+			<li>Connect</li>
+		</ul>
 	</div>
 	<div id="content">
 		{% block body %}{% endblock %}
+		<div class="wrap">
+			<img src="https://farm6.staticflickr.com/5518/13967563127_07ace2d8df_b.jpg">
+		</div>
+		<div class="wrap">
+			<img src="https://farm3.staticflickr.com/2912/13967592690_6f766aa1f8_b.jpg">
+		</div>
+		<div class="wrap">
+			<img src="https://farm4.staticflickr.com/3684/13782734334_79a0ae8236_b.jpg">
+		</div>
 	</div>
 </html>
